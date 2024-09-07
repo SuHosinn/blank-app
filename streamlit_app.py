@@ -19,7 +19,7 @@ size = ' + size + "x" + size + '     #"1024x1024"
 st.write(size)
 
 if st.button("이미지 생성"):
-    if prompt:
+    if prompt and size:
         try:
             kwargs = {
                 "prompt": prompt,
