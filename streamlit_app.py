@@ -15,9 +15,7 @@ prompt = st.text_input("프롬프트를 입력하세요:")
 
 st.write("생성하는 이미지의 사이즈 크기도 입력해주세요.")
 size = st.text_input("사이즈 크기를 입력하세요 (예, 512, 1024, ...) : ")
-size = '"' + size + 'x' + size + '"'
-st.write(size)
-
+size = '"' + size + 'x' + size + '"'     #"1024x1024"
 
 if st.button("이미지 생성"):
     if prompt:
@@ -25,7 +23,7 @@ if st.button("이미지 생성"):
             kwargs = {
                 "prompt": prompt,
                 "n":1,
-                "size": '"' + size + 'x' + size + '"'     #"1024x1024"
+                "size": size
             }
 
             # OpenAI API를 사용하여 이미지 생성
